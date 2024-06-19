@@ -1,2 +1,2 @@
 # jsonik
-Programming language that works only with JSON | main.jsonik or main.jk
+Task runner with JSON for monorepo, tasks | main.jsonik or main.jk
