@@ -19,7 +19,7 @@
       "label": "deploy",
       "needs": ["build:frontend", "build:backend"],
       "run": [
-        "mock-deploy ./dist"
+        "any-deploy ./dist"
       ]
     }
   ]
