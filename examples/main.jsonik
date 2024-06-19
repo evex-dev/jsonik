@@ -1,0 +1,17 @@
+{
+  tasks: [
+    {
+      label: "build:frontend",
+      priority: "high"
+    },
+    {
+      label: "build:backend",
+      priority: "medium",
+      need: "build:frontend"
+    },
+    {
+      label: "deploy",
+      needs: ["build:frontend", "build:backend"]
+    }
+  ]
+}
