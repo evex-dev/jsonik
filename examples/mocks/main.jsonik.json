@@ -1,0 +1,15 @@
+{
+  "imports": {
+    "std": "std:default",
+    "math": "std:math"
+  },
+  "main": {
+    "args": ["pow_number"],
+    "process": [
+      {
+        "call": "std:process:exit",
+        "args": [0, "End!"]
+      }
+    ]
+  }
+}
