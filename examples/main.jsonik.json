@@ -10,7 +10,6 @@
     },
     {
       "label": "build:backend",
-      "need": "build:frontend",
       "run": [
         "cd backend",
         "npm run build"
