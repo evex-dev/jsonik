@@ -1,17 +1,16 @@
 {
-  tasks: [
+  "tasks": [
     {
-      label: "build:frontend",
-      priority: "high"
+      "label": "build:frontend",
+      "priority": "high"
     },
     {
-      label: "build:backend",
-      priority: "medium",
-      need: "build:frontend"
+      "label": "build:backend",
+      "need": "build:frontend"
     },
     {
-      label: "deploy",
-      needs: ["build:frontend", "build:backend"]
+      "label": "deploy",
+      "needs": ["build:frontend", "build:backend"]
     }
   ]
 }
