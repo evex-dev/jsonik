@@ -16,7 +16,7 @@
         "label": "look dir",
         "needs": ["npm-version", "deno-version"],
         "run": [
-            "dir"
+            "ls"
         ]
       }
     ]

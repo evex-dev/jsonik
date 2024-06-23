@@ -126,6 +126,7 @@ func Runner(taskName string) {
 			
 			parsedCommand := parseCommand(command)
 			cmd := exec.Command(parsedCommand[0], parsedCommand[1:]...)
+			cmd.Stdout = os.Stdout
 
 			if err := cmd.Run(); err != nil {
 				fmt.Println("", logger.ErrorStyle.Render(logger.GraftingMart), logger.ErrorStyle.Render(logger.ErrorMark, err.Error()))
@@ -156,5 +157,5 @@ func deleteValueFromSlice(slice []Task, value Task) []Task {
 
 func parseCommand(command string) []string {
 	splitedCommand := strings.Split(command, " ")
-	return []string{splitedCommand[0]}
+	return append([]string{splitedCommand[0]}, splitedCommand[1:]...)
 }
