@@ -33,4 +33,14 @@ var (
 	WarnMark  = "⚠"
 	InfoMark  = "(i)"
 	SuccessMark = "✔"
+
+	LoadingStyle = lipgloss.NewStyle().Foreground(
+		lipgloss.AdaptiveColor{
+			Light: "#6666ff",
+			Dark:  "#2222ff",
+		},
+	).Bold(true)
+	LoadingMark = "⏳"
+
+	GraftingMart = "┗━"
 )
