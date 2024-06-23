@@ -8,17 +8,17 @@
       ]
     },
     {
-      "label": "deploy",
-      "needs": ["build:frontend", "build:backend"],
-      "run": [
-        "any-deploy ./dist"
-      ]
-    },
-    {
       "label": "build:backend",
       "run": [
         "cd backend",
         "npm run build"
+      ]
+    },
+    {
+      "label": "deploy",
+      "needs": ["build:frontend", "build:backend"],
+      "run": [
+        "any-deploy ./dist"
       ]
     }
   ]

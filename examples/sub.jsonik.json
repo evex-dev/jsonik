@@ -1,0 +1,24 @@
+{
+    "tasks": [
+      {
+        "label": "npm-version",
+        "run": [
+            "npm --version"
+        ]
+      },
+      {
+        "label": "deno-version",
+        "run": [
+            "deno --version"
+        ]
+      },
+      {
+        "label": "look dir",
+        "needs": ["npm-version", "deno-version"],
+        "run": [
+            "dir"
+        ]
+      }
+    ]
+  }
+  
