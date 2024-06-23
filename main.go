@@ -24,6 +24,7 @@ func main() {
 	case "help":
 		fmt.Println(logger.InfoStyle.Render(logger.InfoMark, "Use 'jsonik run {task_title}' to run a task"))
 		fmt.Println(logger.InfoStyle.Render(logger.InfoMark, "Use 'jsonik help' for help"))
+		fmt.Println(logger.InfoStyle.Render(logger.InfoMark, "See more on", logger.InfoStyle.Underline(true).Render("https://github.com/Charmbracelet/jsonik")))
 	default:
 		fmt.Println(logger.ErrorStyle.Render(logger.ErrorMark, "Unknown command : ", commandName))
 		fmt.Println(logger.InfoStyle.Render(logger.InfoMark, "Use 'jsonik help' for help"))
