@@ -13,10 +13,10 @@
         ]
       },
       {
-        "label": "look dir",
+        "label": "bun-version",
         "needs": ["npm-version", "deno-version"],
         "run": [
-            "ls"
+            "bun --version"
         ]
       }
     ]

@@ -6,7 +6,6 @@ json + sonik = jsonik
 
 ## How to use
 
-
 ```shell
 # run main.jsonik.json
 jsonik run
@@ -18,4 +17,10 @@ jsonik run build
 jsonik run ./test.jsonik.json
 # run {task_title}.jsonik.json
 jsonik run {task_title}
+```
+
+## Build
+
+```shell
+jsonik build
 ```
