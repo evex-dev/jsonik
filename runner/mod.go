@@ -118,17 +118,17 @@ func Runner(taskName string) {
 	}
 
 	for _, task := range taskListAligned {
-		fmt.Println()
 		fmt.Println(logger.LoadingStyle.Render(logger.LoadingMark, "Running task :", task.Label))
 
 		for _, command := range task.Run {
 			fmt.Println(logger.LoadingStyle.Render("", logger.GraftingMart, logger.LoadingMark, "Running command :", command))
 			
 			parsedCommand := parseCommand(command)
-			cmd := exec.Command(parsedCommand[0], parsedCommand[1:]...)
-			cmd.Stdout = os.Stdout
+			cmdOutput, err := exec.Command(parsedCommand[0], parsedCommand[1:]...).Output()
 
-			if err := cmd.Run(); err != nil {
+			fmt.Println(string(cmdOutput))
+
+			if _, err := cmdOutput, err; err != nil {
 				fmt.Println("", logger.ErrorStyle.Render(logger.GraftingMart), logger.ErrorStyle.Render(logger.ErrorMark, err.Error()))
 			}
 		}
